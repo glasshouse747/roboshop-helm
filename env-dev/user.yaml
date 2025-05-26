@@ -1,0 +1,7 @@
+env: dev
+appName: user
+configMap_data:
+  MONGO: true
+  MONGO_URL: "mongodb://mongodb-dev.mydevops.shop:27017/users"
+  REDIS_URL: "redis://redis-dev.mydevops.shop:6379"
+
