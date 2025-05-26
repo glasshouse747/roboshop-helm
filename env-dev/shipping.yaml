@@ -8,7 +8,6 @@ configMap_data:
   DB_USER: root
   DB_PASS: RoboShop@1
 
-
 db_job:
   enabled: true
   ext: sql
@@ -18,5 +17,11 @@ db_job:
   jobs:
     - master-data
 
-
+resources:
+  requests:
+    memory: "2048Mi"
+    cpu: "1000m"
+  limits:
+    memory: "3000Mi"
+    cpu: "1200m"
 
