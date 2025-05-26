@@ -6,6 +6,6 @@ metadata:
     app: {{ .Values.appName }}
 data:
   {{- range $key, $val := .Values.configMap_data }}
-  {{ $key }}: {{ $val }}
+  {{ $key }}: {{ $val | quote }}
   {{- end }}
 
