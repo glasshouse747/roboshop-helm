@@ -43,7 +43,7 @@ metadata:
 spec:
   provider:
     vault:
-      server: "http://vault-int.rdevopsb84.online:8200"
+      server: "http://vault-int.mydevops.shop:8200"
       path: "roboshop-${var.env}"
       version: "v2"
       auth:
