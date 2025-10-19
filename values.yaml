@@ -7,20 +7,20 @@ db_job:
 # Container configuration
 containerPort: 8080      # Port your app container listens on
 
-# Liveness and readiness probes
-probes:
-  liveness:
-    path: /health         # HTTP GET path for liveness check
-    port: 8080            # Port for liveness probe
-    initialDelaySeconds: 10
-    periodSeconds: 5
-    failureThreshold: 3
-  readiness:
-    path: /ready          # HTTP GET path for readiness check
-    port: 8080            # Port for readiness probe
-    initialDelaySeconds: 5
-    periodSeconds: 5
-    failureThreshold: 3
+## Liveness and readiness probes
+#probes:
+#  liveness:
+#    path: /health         # HTTP GET path for liveness check
+#    port: 8080            # Port for liveness probe
+#    initialDelaySeconds: 10
+#    periodSeconds: 5
+#    failureThreshold: 3
+#  readiness:
+#    path: /ready          # HTTP GET path for readiness check
+#    port: 8080            # Port for readiness probe
+#    initialDelaySeconds: 5
+#    periodSeconds: 5
+#    failureThreshold: 3
 
 # Service configuration
 serviceType: ClusterIP     # Options: ClusterIP, NodePort, LoadBalancer
