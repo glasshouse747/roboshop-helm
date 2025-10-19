@@ -2,6 +2,20 @@ db_job:
   enabled: false
 
 containerPort: 8080
+probes:
+  liveness:
+    path: /health
+    port: 8080
+    initialDelaySeconds: 10
+    periodSeconds: 5
+    failureThreshold: 3
+  readiness:
+    path: /health
+    port: 8080
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    failureThreshold: 3
+
 serviceType: ClusterIP
 
 minReplicas: 2
