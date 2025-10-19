@@ -24,5 +24,6 @@ probes:
 
 # Service configuration
 serviceType: ClusterIP     # Options: ClusterIP, NodePort, LoadBalancer
+
 minReplicas: 2
 maxReplicas: 10
