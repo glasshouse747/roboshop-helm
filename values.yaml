@@ -14,12 +14,14 @@ probes:
     port: 8080            # Port for liveness probe
     initialDelaySeconds: 10
     periodSeconds: 5
+    timeoutSeconds: 1
     failureThreshold: 3
   readiness:
     path: /ready          # HTTP GET path for readiness check
     port: 8080            # Port for readiness probe
     initialDelaySeconds: 5
     periodSeconds: 5
+    timeoutSeconds: 1
     failureThreshold: 3
 
 # Service configuration
